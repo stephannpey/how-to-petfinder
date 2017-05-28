@@ -89,7 +89,7 @@
 				<h2>What are APIs?</h2>
 				</header>
 					<p>API stands for Application Programming Interface and it serves as an interface between different programs, allowing them to communicate and interact with each other. Programmers make APIs to give developers access to their data and resources. For a more comprehensive definition, <a href="https://en.wikipedia.org/wiki/Application_programming_interface">Wikipedia </a>has a great explanation of APIs.</p>
-					<p>And for visual learners, here is a FANTASTIC animated answer to the question "What is an API?"
+					<p>And for visual learners, here is a fantastic animated answer to the question "What is an API?"
 					<br><iframe width="560" height="315" src="https://www.youtube.com/embed/s7wmiS2mSXY" frameborder="0" allowfullscreen></iframe>
 					</p>
 				<header class="align-center">
@@ -130,7 +130,7 @@
 				<header class="align-center">
 					<h2>Sending a Request</h2>
 				</header>
-					<p>Okay, now for the good stuff! Let's learn how to send a request. The Petfinder API is a RESTful API, meaning it is accessed using standard HTTP request methods. For GET calls, the arguments are specified in a URL query string that will look something like this:
+					<p>Okay, now for the good stuff! Let's learn how to send a request. The Petfinder API is a RESTful API, meaning it is accessed using standard HTTP request methods to GET, POST, PUT, and DELETE data. For GET calls, the arguments are specified in a URL query string that will look something like this:
 					<br><br>
 					"http://api.petfinder.com/my.method?key=12345&arg1=foo&token=67890&sig=abcdef"
 					<br><br>
@@ -141,7 +141,7 @@
 					<br><br>
 					<h3>Breaking Down the Request</h3>
 					<p>
-					The GET request is sent as a string made up of different components. The complete query looks like this:
+					A query string is the part of the URL that contains data added by the client application. The GET request is comprised of different name-value pairs. Each name and its value is separated by an "=" sign. Each name-value pair is separated by an "&". In the example code, I have assigned each field to its own variable so we can easily change the fields and/or concatenate it to form a complete URL. The complete query looks like this:
 					<br><br>
 					https://api.petfinder.com/breed.list?animal=dog&key=7cd2b04c4_your_key_here_a1f1da70e3b&format=json&callback=?
 					<br><br>
@@ -183,7 +183,7 @@
 				<header>
 					<h2>Interpreting the Response</h2>
 				</header>
-				<p>The result that was returned is an object, so we do not need to parse the data. If we received data in JSON format, we can parse it to convert it into a JavaScript Object. JSON, which stands for JavaScript Object Notation, is based on a subset of the JavaScript language. In the example above, I took the object that was returned and converted it into JSON string using "stringify" so that we can see what the returned data looks like. As you can tell, it is hard to read and not very useful to us yet. There is a handy tool that can be used to format the result into something a little more readable. All you have to do is paste your JSON result into the box on the left, click the "Format/Beautify" button, and you will get something that looks like this:</p>
+				<p>The result that was returned is an object, so we do not need to parse the data. If we received data in JSON format, we can parse it to convert it into a JavaScript Object. JSON, which stands for JavaScript Object Notation, is based on a subset of the JavaScript language. In the example above, I took the object that was returned and converted it into JSON string using "stringify" so that we can see what the returned data looks like. As you can tell, it is hard to read and not very useful to us yet. There is a handy tool found at <a href="https://jsonformatter.org">JSONformatter.org</a> that can be used to format the result into something a little more readable. All you have to do is paste your JSON result into the box on the left, click the "Format/Beautify" button, and you will get something that looks like this:</p>
 				<img src ="images/formattedJSON.jpg"/>
 				<p>However, if you want to display this information on your application, we still have some work to do. Since the data was already returned in an object, we can use dot notation to access and display the data. Here is what the edited code now looks like:</p>
 				<img src ="images/displayBreedList.jpg"/>
